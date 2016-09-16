@@ -1,0 +1,48 @@
+#signup-view{
+  .cont {
+    position: relative;
+    height: 100%;
+    // background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-1.jpg');
+    background-size: cover;
+    overflow: auto;
+    font-family: $openSans;
+  }
+  .login__submit {
+    top: 25px;
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 4.5rem;
+    margin: 2.4rem 0 0rem;
+    border-color: #28a54c;
+    background-color: #33cd5f;
+    color: #fff;
+    font-size: 1.6rem;
+    min-height: 40px;
+    border-radius: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+  }
+  .login__submit_facbook {
+    top: 25px;
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 4.5rem;
+    margin: 2.4rem 0 0rem;
+    font-size: 1.6rem;
+    min-height: 40px;
+    border-radius: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+  }
+
+  .mistmatch {
+    top: 34px;
+    font-size: 14px;
+    color: red;
+    position: relative;
+  }
+}

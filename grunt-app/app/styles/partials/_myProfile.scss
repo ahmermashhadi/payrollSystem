@@ -1,0 +1,86 @@
+#my-profile-view{
+  .size-avatar-2{
+    width: 72px;
+    height: 72px;
+    max-width: 72px;
+    max-height: 72px;
+    border-radius: 50%;
+    margin-right: 40px;
+    float: left;
+  }
+
+  .vertical-divider{
+    border-left: 2.5px solid #28a54c;
+    width: 65%;
+    position: absolute;
+    padding-left: 8px;
+    left: 100px;
+    top: 10px;
+  }
+
+  .profile-location{
+    background: #d0f9cd;
+    margin: 0 auto;
+    color: #28a54c;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .location-icon{
+    margin-right: 8px;
+    font-size: 20px;
+  }
+
+  .item-body{
+    padding: 10px;
+  }
+
+  .profile-section-1{
+    background: #f0efef;
+    padding: 20px;
+    line-height: 12px;
+  }
+
+  .item-para{
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .item-para > a {
+    color: #28a54c;
+    text-decoration: none;
+  }
+
+  .profile-tags{
+    margin-top: 7px;
+    margin-left: 3px;
+    margin-bottom: 7px;
+    color: #28a54c;
+    border: 2.5px solid #28a54c;
+    padding: 5px;
+    width: auto;
+    display: inline-block;
+  }
+
+  .profile-name{
+    height: 90px;
+    width: 100%;
+    white-space: pre-line;
+  }
+
+  .container-header-height{
+    height: 180px;
+  }
+
+  .container-user-header-height{
+    height: 140px;
+  }
+
+  .profile-date{
+    height: 20px;
+    white-space: pre-wrap;
+    overflow: visible;
+  }
+
+}

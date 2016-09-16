@@ -1,0 +1,133 @@
+/*customize your theme here*/
+
+
+/*color*/
+
+.event {
+    color: #11c1f3;
+}
+
+
+/*bar*/
+
+.bar.bar-event {
+    border-color: #0a9dc7;
+    background-color: #11c1f3;
+    color: #fff;
+}
+
+.bar.bar-event .title {
+    color: #fff;
+}
+
+.bar-event .button {
+    border-color: #0a9dc7;
+    background-color: #11c1f3;
+    color: #fff;
+}
+
+.bar-event .button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bar-event .button.active,
+.bar-event .button.activated {
+    border-color: #0a9dc7;
+    background-color: #0a9dc7;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-event .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.bar-event .button.button-icon {
+    border-color: transparent;
+    background: none;
+}
+
+
+/*background*/
+
+.background-event,
+.background-event .pane,
+.background-event .item,
+.background-event .item-complex .item-content,
+background-event .menu {
+    background-color: #fff;
+}
+
+
+/*button*/
+
+.button.button-event {
+    border-color: #0a9dc7;
+    background-color: #11c1f3;
+    color: #fff;
+}
+
+.button.button-event:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button.button-event.active,
+.button.button-event.activated {
+    border-color: #0a9dc7;
+    background-color: #0a9dc7;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.button-event.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #11c1f3;
+}
+
+.button.button-event.button-icon {
+    border-color: transparent;
+    background: none;
+}
+
+.button.button-event.button-outline {
+    border-color: #11c1f3;
+    background: transparent;
+    color: #11c1f3;
+}
+
+.button.button-event.button-outline.active,
+.button.button-event.button-outline.activated {
+    background-color: #11c1f3;
+    box-shadow: none;
+    color: #fff;
+}
+
+
+/*talk cover*/
+
+.talk-cover {
+    background-color: #4d4d4d;
+    color: #fff !important;
+}
+
+
+/*speaker profile*/
+
+.profile {
+    background-color: #4d4d4d;
+    color: #fff !important;
+}
+
+
+/*item divider*/
+
+.background-event .item-divider {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}

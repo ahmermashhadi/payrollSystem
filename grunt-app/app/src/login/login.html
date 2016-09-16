@@ -1,0 +1,59 @@
+<ion-view id="login-page">
+<ion-nav-bar class="bar-balanced">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear header-item"
+        ng-click="$root.changePage('Channel', $event)">
+      <i class="icon ion-home"></i>
+    </button>
+
+<!--     <button class="button back-button buttons button-clear header-item" ng-click="vm.goBack();">
+      <i class="icon ion-ios-arrow-back"></i>
+    </button> -->
+  </ion-nav-buttons>
+</ion-nav-bar>
+  <div class="cont">
+    <div class="demo top-20">
+
+      <div class="login">
+        <!-- <div class="login__check"></div> -->
+        <ion-content class="content-top-20">
+
+          <div class="login__form">
+            <form name="loginForm" novalidate ng-submit="vm.login()">
+              <div class="login__row">
+                <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                  <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" stroke="#33cd5f"
+  stroke-width="1" fill="none"/>
+                </svg>
+                <input required name="username" type="text" class="login__input name" placeholder="Username" ng-model="vm.user.username"/>
+              </div>
+              <div class="login__row">
+                <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+                  <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" stroke="#33cd5f"
+  stroke-width="1" fill="none"/>
+                </svg>
+                <input required name="password" type="password" class="login__input pass" placeholder="Password" ng-model="vm.user.password"/>
+              </div>
+              <button type="submit" class="button login__submit" ng-disabled="loginForm.$invalid">Sign in</button>
+              <button type="button" class="button button-positive login__submit" ng-click="vm.Oauth('facebook')">
+                <i class="fa fa-facebook social-icon" aria-hidden="true"></i>
+                Login with Facebook
+              </button>
+              <!--<button type="button" class="button button-calm login__submit">-->
+              <!--<i class="fa fa-twitter social-icon" aria-hidden="true"></i>-->
+              <!--Login in with Twitter-->
+              <!--</button>-->
+              <!--<button type="button" class="button button-assertive login__submit">-->
+              <!--<i class="fa fa-google-plus social-icon" aria-hidden="true"></i>-->
+              <!--Log in with Google-->
+              <!--</button>-->
+              <p class="login__signup">Don't have an account?<br/><a class="signup-link" ui-sref="Signup">Sign up</a></p>
+
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>
+

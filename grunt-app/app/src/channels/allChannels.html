@@ -1,0 +1,28 @@
+<ion-view title="All Departments">
+  <ion-nav-bar  class="bar-balanced nav-title-slide-ios7">
+    <ion-nav-buttons>
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <div class="container">
+    <ion-content class="top-44" id="channels-view">
+      <div class="row row-wrap full-row">
+        <div class="col col-50 single-channel" ui-sref="AboutUs">
+          <div class="channels-body" style="border-bottom-color: #009aee">
+            <h3 class="channel-name">Human Resources</h3>
+          </div>
+          <div>
+          <p class="channels-status"><i class="fa fa-user" aria-hidden="true"></i> 22 Employees</p>
+          </div>
+        </div>
+        <!-- <div ng-repeat="channel in vm.channels" class="col-50 col-fit">
+          <button style="background-color: {{channel.color}} !important; border-color: {{channel.color}} !important;" ui-sref="Events.view({cid:channel._id})"
+                  class="button button-full button-height-160px button-assertive">
+            <h2 class="channels-style">{{channel.name}}</h2>
+            <div class="channels-label">{{channel.members.length}} Participants</div>
+          </button>
+        </div> -->
+      </div>
+    </ion-content>
+  </div>
+</ion-view>

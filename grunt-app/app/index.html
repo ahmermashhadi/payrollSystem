@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta charset="UTF-8">
+  <title ng-bind="pageTitle"></title>
+
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/ng-material-floating-button/mfb/dist/mfb.min.css">
+  <link href="styles/css/ionic.app.css" rel="stylesheet">
+  <link href="styles/css/style.css" rel="stylesheet">
+  <link href="styles/css/theme.css" rel="stylesheet">
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/css/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/ionic.js -->
+  <script src="bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/ngCordova.js -->
+  <script src="bower_components/ngCordova/dist/ng-cordova.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+</head>
+
+<body ng-cloak="">
+<ion-side-menus enable-menu-with-back-views="true">
+
+  <ion-side-menu-content>
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" id="index-view">
+    <ion-header-bar align-title="left" class="bar-dark">
+
+      <h4 class="title text-center" style="color: white">Main Menu</h4>
+
+    </ion-header-bar>
+    <ion-content class="top-44 back-dark">
+      <ion-list class="max-height">
+        <ion-item class="item" menu-close="" ui-sref="AboutUs">
+          <h2 class="color-white">
+            <i class="fa fa-info pull-left fa-padding-left-fix" aria-hidden="true"></i>
+            About Us
+          </h2>
+        </ion-item>
+
+        <ion-item class="item" menu-close="" href="#/channels">
+          <h2 class="color-white">
+            <i class="fa fa-television pull-left fa-padding-left-fix" aria-hidden="true"></i>
+            All Daperments
+          </h2>
+        </ion-item>
+
+
+
+      </ion-list>
+    </ion-content>
+    <button ng-if="$root.user" menu-close="" class="button button-full button-full-fix button-assertive color-white sidemenu-button" ng-click="$root.logout();">
+      Logout
+    </button>
+    <button ng-if="!$root.user" menu-close="" class="button button-full button-full-fix button-balanced color-white sidemenu-button" ui-sref="Login">
+      Login
+    </button>
+  </ion-side-menu>
+</ion-side-menus>
+
+</body>
+
+<!-- build:js scripts/lib.js -->
+<script src="lib/underscore-min.js"></script>
+<script src="lib/moment.min.js"></script>
+<script src="bower_components/ng-material-floating-button/src/mfb-directive.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/restangular/dist/restangular.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+<script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+<script src="bower_components/angular-timeago/dist/angular-timeago.min.js"></script>
+<script src="bower_components/satellizer/dist/satellizer.min.js"></script>
+<script src="bower_components/ngOpenFB/ngOpenFB.min.js"></script>
+<!-- endbuild -->
+
+
+<!-- build:js scripts/app.js -->
+<script src="src/core/core.module.js"></script>
+<script src="src/common/common.module.js"></script>
+<script src="src/channels/channels.module.js"></script>
+<script src="src/login/login.module.js"></script>
+<script src="src/Signup/Signup.module.js"></script>
+<script src="src/AboutUs/AboutUs.module.js"></script>
+<script src="src/app.module.js"></script>
+<script src="src/core/restangular.config.js"></script>
+<script src="src/core/router.config.js"></script>
+<script src="src/core/httpStatus.constant.js"></script>
+<script src="src/channels/allchannels.controller.js"></script>
+<script src="src/common/common.controller.js"></script>
+<script src="src/login/login.controller.js"></script>
+<script src="src/common/dataService.factory.js"></script>
+<script src="src/Signup/signup.controller.js"></script>
+<script src="src/AboutUs/aboutus.controller.js"></script>
+<script src="src/core/satellizer.config.js"></script>
+<!-- endbuild -->
+
+</html>
