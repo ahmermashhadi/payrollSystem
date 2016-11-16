@@ -1,0 +1,30 @@
+<ion-popover-view class="pop-over-trans popover-fit" id="filter-view">
+
+  <ul class="list no-border">
+    <h3>Order By: </h3>
+
+    <li class="item item-toggle">
+      Salary
+      <label class="toggle toggle-assertive" >
+        <input type="checkbox" ng-model="vm.salary" ng-click="vm.sortBy('salary', vm.salary)">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </li>
+
+    <li class="item item-toggle">
+      Name
+      <label class="toggle toggle-success">
+        <input type="checkbox" ng-model="vm.name" ng-click="vm.sortBy('name', vm.name)">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </li>
+
+  </ul>
+
+
+
+</ion-popover-view>

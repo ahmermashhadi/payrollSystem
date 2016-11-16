@@ -7,14 +7,47 @@
   <div class="container">
     <ion-content class="top-44" id="channels-view">
       <div class="row row-wrap full-row">
-        <div class="col col-50 single-channel" ui-sref="AboutUs">
-          <div class="channels-body" style="border-bottom-color: #009aee">
+        <div class="col col-20 single-channel" ui-sref="Employee({dname:'hr'})">
+          <div class="channels-body" style="border-bottom-color: #009aee; background-image: url('../../images/HumanResources.png'); background-size: 120% 150%;">
             <h3 class="channel-name">Human Resources</h3>
           </div>
           <div>
           <p class="channels-status"><i class="fa fa-user" aria-hidden="true"></i> 22 Employees</p>
           </div>
         </div>
+        <div class="col col-20 single-channel" ui-sref="Employee({dname:'finance'})">
+          <div class="channels-body" style="border-bottom-color: #33ef8a; background-image: url('../../images/finance.png'); background-size: 120% 150%;">
+            <h3 class="channel-name">Finance</h3>
+          </div>
+          <div>
+            <p class="channels-status"><i class="fa fa-user" aria-hidden="true"></i> 8 Employees</p>
+          </div>
+        </div>
+        <div class="col col-20 single-channel" ui-sref="Employee({dname:'production'})">
+          <div class="channels-body" style="border-bottom-color: #f8b9b7; background-image: url('../../images/production.jpg'); background-size: 120% 150%;">
+            <h3 class="channel-name">Production</h3>
+          </div>
+          <div>
+            <p class="channels-status"><i class="fa fa-user" aria-hidden="true"></i> 8 Employees</p>
+          </div>
+        </div>
+        <div class="col col-20 single-channel" ui-sref="Employee({dname:'marketing'})">
+          <div class="channels-body" style="border-bottom-color: #E9DC51; background-image: url('../../images/marketing.png'); background-size: 120% 150%;">
+            <h3 class="channel-name">Marketing </h3>
+          </div>
+          <div>
+            <p class="channels-status"><i class="fa fa-user" aria-hidden="true"></i> 8 Employees</p>
+          </div>
+        </div>
+        <div class="col col-20 single-channel" ui-sref="Employee({dname:'development'})">
+          <div class="channels-body" style="border-bottom-color: #8A6343; background-image: url('../../images/development.jpg'); background-size: 120% 150%;">
+            <h3 class="channel-name">Development</h3>
+          </div>
+          <div>
+            <p class="channels-status"><i class="fa fa-user" aria-hidden="true"></i> 8 Employees</p>
+          </div>
+        </div>
+
         <!-- <div ng-repeat="channel in vm.channels" class="col-50 col-fit">
           <button style="background-color: {{channel.color}} !important; border-color: {{channel.color}} !important;" ui-sref="Events.view({cid:channel._id})"
                   class="button button-full button-height-160px button-assertive">

@@ -1,6 +1,21 @@
 .color-white {
   color: #fff; }
 
+ion-item {
+  cursor: pointer; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.no-border {
+  border: 0; }
+
+.bar .button.button-icon {
+  font-size: 35px; }
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: #33cd5f !important; }
+
 ion-list .list {
   height: 100%; }
 
@@ -152,6 +167,14 @@ ion-list .list {
 .button-full-fix {
   width: 90% !important;
   margin-left: 15px; }
+
+.designation {
+  margin-left: 40px;
+  font-size: 13px;
+  color: #33cd5f; }
+  .designation span {
+    font-size: 16px;
+    color: #666; }
 
 #event-detail .message-username {
   opacity: 0.9;
@@ -805,7 +828,7 @@ input, button {
   height: 30em;
   margin-bottom: 4.5em; }
   #channels-view .single-channel .channels-body {
-    height: 26.5em;
+    height: 35.5em;
     background-color: #e0e0e0;
     border-bottom: 4em solid #000;
     text-align: center; }
@@ -849,7 +872,9 @@ input, button {
 #my-profile-view .profile-section-1 {
   background: #f0efef;
   padding: 20px;
-  line-height: 12px; }
+  line-height: 12px;
+  font-size: 18px;
+  text-align: center; }
 #my-profile-view .item-para {
   font-size: 20px;
   font-weight: 500; }
@@ -864,6 +889,7 @@ input, button {
   border: 2.5px solid #28a54c;
   padding: 5px;
   width: auto;
+  font-size: 22px;
   display: inline-block; }
 #my-profile-view .profile-name {
   height: 90px;
@@ -877,6 +903,41 @@ input, button {
   height: 20px;
   white-space: pre-wrap;
   overflow: visible; }
+#my-profile-view .final-salary {
+  color: #28a54c;
+  font-size: 44px;
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px #7dff79;
+  -webkit-transition: width 0.3s;
+  /*Safari & Chrome*/
+  transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  /* Firefox 4 */
+  -o-transition: width 0.3s;
+  /* Opera */ }
+
+.pagination {
+  top: 29em;
+  display: block;
+  position: absolute;
+  font-size: 22px;
+  text-align: center;
+  width: 100%; }
+  .pagination li {
+    display: inline;
+    letter-spacing: 2em; }
+    .pagination li a {
+      color: #28a54c;
+      padding: 8px;
+      width: 100%;
+      clear: right;
+      /* display: inline-block; */
+      /* float: right; */
+      /* text-align: center !important; */
+      border: 1px solid #28a54c;
+      text-decoration: none; }
 
 #event-stream .message-username {
   opacity: 0.9;
@@ -1101,5 +1162,148 @@ input, button {
   background-color: #58585A; }
 #index-view .item-complex .item-content, #index-view .item-radio .item-content {
   background-color: #58585A; }
+
+#contact-view {
+  /* Input Styles */
+  /* Generic Button Styles */
+  /* Send Button Styles */ }
+  #contact-view form {
+    margin: 5%; }
+  #contact-view #contact {
+    padding: 10px 0 10px; }
+  #contact-view .contact-text {
+    margin: 45px auto; }
+  #contact-view .mail-message-area {
+    width: 100%;
+    padding: 0 15px; }
+  #contact-view .mail-message {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8) !important;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+    margin: 0 auto;
+    border-radius: 0; }
+  #contact-view .not-visible-message {
+    height: 0px;
+    opacity: 0; }
+  #contact-view .visible-message {
+    height: auto;
+    opacity: 1;
+    margin: 25px auto 0; }
+  #contact-view .form {
+    width: 100%;
+    padding: 15px;
+    background: #f8f8f8;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom: 25px;
+    color: #727272 !important;
+    font-size: 17px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s; }
+  #contact-view .form:hover {
+    border: 1px solid #8BC3A3; }
+  #contact-view .form:focus {
+    color: white;
+    outline: none;
+    border: 1px solid #8BC3A3; }
+  #contact-view .textarea {
+    height: 200px;
+    max-height: 200px;
+    max-width: 100%; }
+  #contact-view .btn {
+    padding: 8px 12px;
+    background: #0A5175;
+    display: block;
+    width: 120px;
+    margin: 10px 0 0px 0;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 0.8em;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1); }
+  #contact-view .btn:hover {
+    background: #33cd5f;
+    color: white; }
+  #contact-view .form-btn {
+    width: 180px;
+    display: block;
+    height: auto;
+    padding: 15px;
+    color: #fff;
+    background: #33cd5f;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin: auto;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1); }
+  #contact-view .form-btn:hover {
+    background: #111;
+    color: white;
+    border: none; }
+  #contact-view .form-btn:active {
+    opacity: 0.9; }
+  #contact-view center {
+    margin-top: 330px; }
+  #contact-view input {
+    position: relative;
+    z-index: 9999; }
+
+.animate-all {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s; }
+
+.animate-fast {
+  transition: all .3s !important;
+  -webkit-transition: all .3s !important;
+  -moz-transition: all .3s !important;
+  -o-transition: all .3s !important;
+  -ms-transition: all .3s !important; }
+
+.animate-none {
+  transition: all 0s;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  -ms-transition: all 0s; }
+
+.move-up-44 {
+  transform: translateY(-44px);
+  -webkit-transform: translateY(-44px);
+  -moz-transform: translateY(-44px);
+  -o-transform: translateY(-44px);
+  -ms-transform: translateY(-44px); }
+
+.move-down-44 {
+  transform: translateY(44px);
+  -webkit-transform: translateY(44px);
+  -moz-transform: translateY(44px);
+  -o-transform: translateY(44px);
+  -ms-transform: translateY(44px); }
+
+#filter-view .list {
+  padding: 60px; }
+#filter-view li {
+  border-style: none; }
+
+ion-popover-view {
+  top: 25% !important;
+  left: 35% !important;
+  margin-left: 0px !important;
+  opacity: 1 !important;
+  border-radius: 50px !important; }
 
 /*# sourceMappingURL=main.css.map */

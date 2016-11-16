@@ -36,10 +36,12 @@
     padding: 10px;
   }
 
-  .profile-section-1{
+  .profile-section-1 {
     background: #f0efef;
     padding: 20px;
     line-height: 12px;
+    font-size: 18px;
+    text-align: center;
   }
 
   .item-para{
@@ -60,6 +62,7 @@
     border: 2.5px solid #28a54c;
     padding: 5px;
     width: auto;
+    font-size: 22px;
     display: inline-block;
   }
 
@@ -83,4 +86,41 @@
     overflow: visible;
   }
 
+  .final-salary{
+    color: #28a54c;
+    font-size: 44px;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px #7dff79;
+    -webkit-transition: width 0.3s; /*Safari & Chrome*/
+    transition: width 0.3s;
+    -moz-transition: width 0.3s; /* Firefox 4 */
+    -o-transition: width 0.3s; /* Opera */
+  }
+
+}
+
+.pagination{
+  top: 29em;
+  display: block;
+  position: absolute;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  li{
+    display: inline;
+    letter-spacing: 2em;
+    a{
+      color: #28a54c;
+      padding: 8px;
+      width: 100%;
+      clear: right;
+      /* display: inline-block; */
+      /* float: right; */
+      /* text-align: center !important; */
+      border: 1px solid #28a54c;
+      text-decoration: none;
+    }
+  }
 }

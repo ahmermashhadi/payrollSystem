@@ -1,0 +1,40 @@
+.animate-all {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+}
+
+.animate-fast {
+  transition: all .3s !important;
+  -webkit-transition: all .3s !important;
+  -moz-transition: all .3s !important;
+  -o-transition: all .3s !important;
+  -ms-transition: all .3s !important;
+}
+
+.animate-none{
+  transition: all 0s ;
+  -webkit-transition: all 0s ;
+  -moz-transition: all 0s ;
+  -o-transition: all 0s ;
+  -ms-transition: all 0s ;
+}
+
+.move-up-44 {
+  transform: translateY(-44px);
+  -webkit-transform: translateY(-44px);
+  -moz-transform: translateY(-44px);
+  -o-transform: translateY(-44px);
+  -ms-transform: translateY(-44px);
+}
+
+.move-down-44 {
+  transform: translateY(44px);
+  -webkit-transform: translateY(44px);
+  -moz-transform: translateY(44px);
+  -o-transform: translateY(44px);
+  -ms-transform: translateY(44px);
+
+}

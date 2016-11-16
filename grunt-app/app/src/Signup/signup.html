@@ -2,12 +2,8 @@
 <ion-nav-bar class="bar-balanced">
   <ion-nav-buttons side="left">
     <button class="button button-clear header-item"
-        ng-click="$root.changePage('Channel', $event)">
-      <i class="icon ion-home"></i>
-    </button>
-
-    <button class="button back-button buttons button-clear header-item" ng-click="vm.goBack();">
-      <i class="icon ion-ios-arrow-back"></i>
+        ui-sref="Channel">
+      <i class="icon ion-home" ui-sref=""></i>
     </button>
   </ion-nav-buttons>
 </ion-nav-bar>

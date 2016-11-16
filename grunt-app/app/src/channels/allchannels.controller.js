@@ -19,8 +19,6 @@
     vm.goBack = goBack;
 ////////////// Function Declaration
 
-    console.log(vm.channels);
-
     function goBack() {
       window.history.back();
     }

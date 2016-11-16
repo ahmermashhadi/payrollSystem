@@ -2,6 +2,25 @@
   color: #fff;
 }
 
+ion-item{
+  cursor: pointer;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.no-border {
+  border: 0;
+}
+
+.bar .button.button-icon {
+  font-size: 35px;
+}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: #33cd5f !important;
+}
 
 ion-list{
   .list{
@@ -196,4 +215,14 @@ ion-list{
 .button-full-fix{
   width: 90% !important;
   margin-left: 15px;
+}
+
+.designation{
+  margin-left: 40px;
+  font-size: 13px;
+  color: #33cd5f;
+  span{
+    font-size: 16px;
+    color: #666;
+  }
 }

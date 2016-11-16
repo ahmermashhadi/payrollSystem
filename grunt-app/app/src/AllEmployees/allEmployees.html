@@ -1,0 +1,54 @@
+<ion-view>
+  <ion-nav-bar class="bar-balanced">
+    <ion-nav-title>All Employees</ion-nav-title>
+
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button ng-if="$root.user" menu-toggle="right" class="button buttons button-icon header-item fa fa-plus" ui-sref="NewEmployee"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <div class="animate-fast">
+    <div  id="search-bar" class="bar bar-header item-input-inset animate-fast no-background drop-shadow-search" ng-class="{'move-down-44': vm.showHeader}">
+      <label class="item-input-wrapper">
+        <i class="icon custom-icon-search placeholder-icon zero-margin zero-padding"></i>
+        <input type="search" placeholder="Search" ng-model="$root.allEmployeeSearch" ng-change="">
+        <button class="button button-icon button-search-bar ion-android-cancel bar-cross-left-fix" on-tap="vm.searchcancel()"
+                ng-if="$root.allEmployeeSearch != ''"></button>
+      </label>
+      <ion-item class="zero-padding no-border searchbar-button-top">
+        <button class="button button-icon button-search-bar zero-margin" ng-click="vm.openPopup($event)">
+          <i class="fa fa-sliders"></i>
+        </button>
+      </ion-item>
+    </div>
+  </div>
+
+  <ion-content delegate-handle="view-scroll" on-scroll="vm.getScrollPosition()" on-drag="vm.getStopPosition()" class="top-44"  ng-class="{'move-down-44': vm.showHeader}">
+    <div class="top-50">
+    </div>
+    <ion-item dir-paginate="participant in vm.participants | filter:{ firstname : $root.allEmployeeSearch} | orderBy:vm.propertyName:vm.reverse | itemsPerPage:6" class="item item-avatar desc-padding">
+      <div class="item-content desc-padding" ui-sref="EmployeeProfile({eid:participant._id})">
+        <img ng-src="{{participant.image || 'images/user.png'}}">
+        <h2>{{participant.firstname + ' ' + participant.lastname}}</h2>
+        <p>{{participant.username || participant.email}}</p>
+      </div>
+      <div style="float: right; width: 100px;">{{participant.salary | currency}} /hr</div>
+      <div class="designation">Designation: <span>{{participant.designation}}</span></div>
+
+    </ion-item>
+    </ion-list>
+
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.refreshEmployee()">
+    </ion-refresher>
+
+    <dir-pagination-controls
+      max-size="6"
+      direction-links="true"
+      boundary-links="true" >
+    </dir-pagination-controls>
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-view id="new-user-view">
+  <ion-nav-bar class="bar-balanced">
+    <ion-nav-title>New Employee</ion-nav-title>
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button buttons button-icon header-item icon ion-navicon"></button>
+  </ion-nav-bar>
+
+
+  <ion-content>
+
+
+
+    <div class="list no-padding" >
+      <div class="button button-full button-energized-dark borderUpDown borderDown">
+        Details
+      </div>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">First Name</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.firstname" type="text" placeholder="First Name">
+      </label>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">Last Name</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.lastname" type="text" placeholder="Last Name">
+      </label>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">Email</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.email" type="text" placeholder="Email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
+      </label>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">Bio</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.bio" type="text" placeholder="Bio">
+      </label>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">Address</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.location" type="text" placeholder="Address">
+      </label>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">Designation</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.designation" type="text" placeholder="Designation">
+      </label>
+      <label class="item-input item-stacked-label">
+        <span class="input-label textColorForModal">Salary ($)</span>
+        <input class="flex col-60 pull-right" ng-model="vm.employee.salary" type="number" placeholder="Salary">
+      </label>
+      <label class="item-input item-stacked-label">
+        <div class="input-label">
+          Department
+        </div>
+        <select ng-model="vm.employee.department" ng-change="vm.showSelectValue(vm.employee.department)">
+          <option value="hr">Human Resources</option>
+          <option value="finance">Finance</option>
+          <option value="production">Production</option>
+          <option value="marketing">Marketing</option>
+          <option value="development">Development</option>
+        </select>
+      </label>
+    </div>
+      <button ng-click="vm.createEmployee(vm.employee)" class="button button-full button-balanced">
+        Submit
+      </button>
+
+  </ion-content>
+
+</ion-view>

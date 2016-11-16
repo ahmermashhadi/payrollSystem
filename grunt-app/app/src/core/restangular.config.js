@@ -12,9 +12,9 @@
     .config(configuration);
 
   /* @ngInject */
-  function configuration(RestangularProvider){
+  function configuration(RestangularProvider, API_URL){
 
-    // RestangularProvider.setBaseUrl(API_URL+'api/');
+    RestangularProvider.setBaseUrl(API_URL+'api/');
 
   }
 

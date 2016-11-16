@@ -1,0 +1,129 @@
+<ion-pane>
+  <ion-view title="Employee" id="my-profile-view">
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon" ng-class="{'icon-glow': $root.unSeen.length > 0}">
+        </button>
+
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <ion-content class="dark-text" title="Venkman"
+                 nav-direction="swap">
+      <div class="top-50">
+
+
+        <div class="item padding-bottom-20 container-user-header-height">
+          <img class="size-avatar-2" ng-src="{{vm.userData.image || 'images/user.png'}}">
+          <div class="vertical-divider">
+            <h1 class="profile-name">{{vm.userData.firstname}} {{vm.userData.lastname}}</h1>
+            <p>
+              Joined:
+              <span class="profile-date">{{vm.userData.createdAt | date:'MMM d, y'}}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="item item-body">
+          <div class="profile-location">
+            <i class="fa fa-map-marker location-icon" aria-hidden="true"></i>
+            {{vm.userData.location}}
+          </div>
+          <div class="profile-section-1">
+
+            <span class="occupation-email">
+            <span class="item-para">Connect:</span>
+              <a href="mailto:{{vm.userData.email}}"
+                 target="_blank">{{vm.userData.email}}</a>
+            </span>
+            <br/>
+            <br/>
+
+
+            <span class="occupation-email">
+            <span class="item-para">Organization:</span>
+              {{vm.userData.occupation}}
+            </span>
+            <br/>
+            <br/>
+
+
+            <span class="occupation-email">
+            <span class="item-para">Designation:</span>
+              {{vm.userData.designation}}
+            </span>
+            <br/>
+            <br/>
+
+            <span class="occupation-email"></span>
+            <span class="item-para">Bio:</span>
+              <span ng-bind-html="vm.userData.bio | linky:'_blank'"></p>
+            </span>
+            <br/>
+            <br/>
+
+          </div>
+
+          <br/>
+          <div class="profile-section-1">
+            <span class="occupation-email">
+            Salary:
+              <br/>
+              <h2 class="profile-tags">{{vm.userData.salary | currency}} /hr</h2>
+            </span>
+            <br/>
+          </div>
+
+          <div class="profile-section-1" >
+            Time Logged:
+            <span class="occupation-email" ng-repeat="date in vm.userData.timelog">
+              <br/>
+              <h2 class="profile-tags">{{date.time | formatDuration}} on {{date.date | date:'dd/MMM/yyyy HH:mm'}}</h2>
+            </span>
+            <br/>
+          </div>
+
+          <div class="profile-section-1" >
+            Salary Gross Earning:
+            <span class="occupation-email">
+              <br/>
+              <h2 class="final-salary">{{vm.finalSalary | currency}}</h2>
+            </span>
+            <br/>
+          </div>
+
+
+
+        </div>
+
+        <button class="button button-block button-royal" ui-sref="EditProfile({eid:vm.userData._id})">
+          Edit Employee
+        </button>
+
+        <button class="button button-block button-assertive" ng-click="$root.showDeletePopup(vm.userData)">
+          Delete Employee
+        </button>
+
+
+        <div class="item text-center" ng-click="vm.showReportOptions(message)">
+          Report Complain
+        </div>
+      </div>
+
+
+      <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.refreshEmployeeProfile()">
+      </ion-refresher>
+
+    </ion-content>
+
+
+  </ion-view>
+</ion-pane>
+<!--<nav id="app-fab" mfb-menu position="br" effect="zoomin"-->
+<!--active-icon="ion-edit" resting-icon="ion-arrow-graph-up-left"-->
+<!--toggling-method="click">-->
+<!--<button icon="ion-plus-round" mfb-button ng-click="$root.showLogin()"-->
+<!--label="Add">-->
+<!--</button>-->
+<!--</nav>-->

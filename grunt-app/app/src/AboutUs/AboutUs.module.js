@@ -21,6 +21,7 @@
        url:'/about-us',
        title: 'About Entaj',
        templateUrl:'src/AboutUs/aboutUs.html',
+       cache: false,
        controller: 'AboutUs as vm'
      }
     );
